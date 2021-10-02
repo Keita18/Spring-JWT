@@ -1,4 +1,4 @@
-package io.getarrays.userservice.model;
+package io.getarrays.userservice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

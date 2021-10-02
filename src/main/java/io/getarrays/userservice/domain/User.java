@@ -1,4 +1,4 @@
-package io.getarrays.userservice.model;
+package io.getarrays.userservice.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,11 +9,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static javax.persistence.FetchType.EAGER;
-import static javax.persistence.GenerationType.*;
+import static javax.persistence.GenerationType.AUTO;
 
-@Entity @Data @NoArgsConstructor @AllArgsConstructor
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "AppUser")
 public class User {
-    @Id @GeneratedValue(strategy = AUTO)
+    @Id
+    @GeneratedValue(strategy = AUTO)
     private Long id;
     private String name;
     private String username;
